@@ -7,13 +7,19 @@ const fetchData = () => {
             let output = ''
             dataArr.forEach(item => {
                 output += `
-                    <ul>
-                    <li>title: ${item.title}</li>
-                    <li>summary: ${item.summary}</li>
-                    </ul>
+                <div class="card">
+                <div class="card-photo">
+                    <img src="./assets/02.png">
+                </div>
+    
+                <div class="card-article">
+                    <h3> ${item.title} </h3>
+                    <p> ${item.summary} </p>
+                </div>
+            </div>
       `
             })
-            document.querySelector('.results').innerHTML = output
+            document.querySelector('.card-container').innerHTML = output
 
 
         })
