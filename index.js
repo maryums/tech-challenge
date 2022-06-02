@@ -1,25 +1,30 @@
-const burgerMenu = document.querySelector("#burger");
-const navbarMenu = document.querySelector(".nav-items");
-const mobileNav = document.querySelector('.mobile-nav')
+const burgerMenu = document.querySelector("#burger")
+const mobileNav = document.querySelector(".mobile-nav")
+const links = document.querySelectorAll(".mobile-links")
+console.log(links)
 
-console.log(mobileNav)
-
-// Responsive Navbar Toggle
 burgerMenu.addEventListener("click", function () {
     mobileNav.classList.toggle("active")
-    burgerMenu.classList.toggle("active");
-});
+    burgerMenu.classList.toggle("active")
+})
 
+for (let i = 0; i < links.length; i++) {
+    let link = links[i]
+    link.addEventListener("click", () => {
+        burgerMenu.classList.toggle("active")
+        mobileNav.classList.toggle("active")
+    })
+}
 
 const fetchData = () => {
-    fetch('./obj.json')
-        .then(response => response.json())
-        .then(data => {
+    fetch("./obj.json")
+        .then((response) => response.json())
+        .then((data) => {
             console.log(data.posts)
             let dataArr = data.posts
-            let output = ''
+            let output = ""
             let count = 1
-            dataArr.forEach(item => {
+            dataArr.forEach((item) => {
                 output += `
                 <div class="card">
                 <div class="card-photo">
@@ -34,13 +39,11 @@ const fetchData = () => {
       `
                 count++
             })
-            document.querySelector('.card-container').innerHTML = output
+            document.querySelector(".card-container").innerHTML = output
         })
-        .catch(error => {
+        .catch((error) => {
             console.log(`Error Fetching data : ${error}`)
-            document.querySelector('.card-container').innerHTML = ''
-        });
+            document.querySelector(".card-container").innerHTML = ""
+        })
 }
-
 fetchData()
-

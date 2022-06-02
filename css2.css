@@ -5,7 +5,7 @@ html {
     box-sizing: inherit;
   }
 
-body, h1, p, a, button, li, ul {
+body, h1, h3, p, a, button, li, ul {
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,9 +25,10 @@ nav {
     justify-content: space-between;
     padding: 27px 24px 20px;
 }
+
 nav > * { 
     flex: 1;
-    align-items: baseline;
+    align-items: center;
     font-size: 16px;
     font-weight: 700;
 }
@@ -39,7 +40,6 @@ nav > * {
     display: none;
 }
 
-
 .nav-brand {
     height: 27px;
 }
@@ -49,7 +49,6 @@ ul {
     padding: 0;
     list-style: none;
     display: flex;
-
 }
 
 .nav-items {
@@ -128,6 +127,7 @@ header h1 {
 .card {
     box-shadow: 0px 13px 27px rgba(0, 0, 0, 0.07); 
     margin: 16px 0;
+    border-radius: 8px;
 }
 
 .card-photo img {
@@ -139,6 +139,7 @@ header h1 {
 .card-article {
     padding: 40px;
 }
+
 .card-article p {
     color: #38444C;
     margin-top: 15px;
@@ -185,43 +186,45 @@ footer img {
     opacity: 0.2;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
     body {
-
+        background: pink;
     }
     nav {
         display: block;
     }
+    .nav-items, .signin-offers, .burger-close {
+        display: none;
+    }
+
     .brand {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .burger-close {
-        display: none;
-    }
-
     .burger-open {
         display: flex;
     }
 
-    .burger.active {
+    .burger.active .burger-open {
+        display: none;
+    }
+    .burger.active .burger-close {
         display: flex;
     }
 
     .mobile-nav.active {
-        display: flex;
-        flex-direction: column;
+        display: block;
         margin-top: 30px;
-        align-items: center;
-
+        transition: 0.8s;
     }
 
     .mobile-items {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        font-size: 16px;
+        font-weight: 400;
     }
 
     .mobile-items > * {
@@ -229,19 +232,106 @@ footer img {
         border-top: 1px solid lightgrey;
     }
 
-    .nav-items {
+    .mobile-items li:last-of-type {
+        border-bottom: 1px solid lightgrey;
+    }
+    mobile-items a {
+        display: block;
+    }
+
+    header {
+        padding-bottom: 40px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+    .card {
+        margin: 32px 0;
+    }
+
+    .card-article {
+        padding: 24px;
+    }
+    .card-article p {
+        margin-top: 8px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        padding-bottom: 50px;
+    }
+
+    .card-container h3 {
+        font-size: 24px;
+    } 
+  
+}
+
+
+@media screen and (min-width:  481px) and (max-width: 768px) {
+    body {
+        background: lightgreen;
+    }
+    nav {
+        display: block;
+    }
+    .nav-items, .signin-offers, .burger-close {
         display: none;
     }
 
-    .signin-offers {
-        display: none;
+    .brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    .burger-open {
+        display: flex;
+    }
+
+    .burger.active .burger-open {
+        display: none;
+    }
+    .burger.active .burger-close {
+        display: flex;
+    }
+
+    .mobile-nav.active {
+        display: block;
+        margin-top: 30px;
+        transition: 0.8s;
+    }
+
+    .mobile-items {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .mobile-items > * {
+        padding: 16px 24px;
+        border-top: 1px solid lightgrey;
+    }
+
+    .mobile-items li:last-of-type {
+        border-bottom: 1px solid lightgrey;
+    }
+    mobile-items a {
+        display: block;
+    }
     
 }
 
-@media screen and (min-width: 800px) {
+
+@media screen and (min-width: 1300px) {
     body {
-        background: purple;
+        background: lightblue;
+    }
+    .container {
+        max-width: 1200px;
+        margin: auto;
     }
 }
