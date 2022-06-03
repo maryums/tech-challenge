@@ -1,4 +1,5 @@
-import { mockAPI, renderCards, navEventListeners, linksEventListeners, renderArticle } from './utils/utils.js'
+import { mockAPI, renderCards, renderArticle } from './utils/utils.js'
+import { navEventListeners, linksEventListeners } from './utils/eventListeners.js'
 
 // window.addEventListener('scroll', function () {
 //     const nav = document.querySelector('nav');

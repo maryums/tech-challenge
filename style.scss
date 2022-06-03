@@ -301,7 +301,7 @@ footer {
 .article-links {
 	display: none;
 	font-size: 12px;
-	max-width: 600px;
+	max-width: 800px;
 	width: 90%;
 	margin: auto;
 	margin-top: 40px;
@@ -312,7 +312,7 @@ footer {
 .article-container {
 	width: 90%;
 	margin: auto;
-	max-width: 600px;
+	max-width: 800px;
 	padding: 20px 0;
 }
 .article-date {
@@ -342,6 +342,7 @@ footer {
 		font-weight: 700;
 	}
 }
+
 @media screen and (min-width: 1200px) {
 	.container {
 		max-width: 1024px;
@@ -474,9 +475,9 @@ footer {
 		}
 	}
 	.article-container {
-		max-width: 500px;
+		max-width: 600px;
 	}
 	.article-links {
-		max-width: 500px;
+		max-width: 600px;
 	}
 }

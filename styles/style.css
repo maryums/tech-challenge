@@ -374,7 +374,7 @@ footer {
 .article-links {
   display: none;
   font-size: 12px;
-  max-width: 600px;
+  max-width: 800px;
   width: 90%;
   margin: auto;
   margin-top: 40px;
@@ -387,7 +387,7 @@ footer {
 .article-container {
   width: 90%;
   margin: auto;
-  max-width: 600px;
+  max-width: 800px;
   padding: 20px 0;
 }
 
@@ -571,10 +571,10 @@ footer {
     font-size: 40px;
   }
   .article-container {
-    max-width: 500px;
+    max-width: 600px;
   }
   .article-links {
-    max-width: 500px;
+    max-width: 600px;
   }
 }
 /*# sourceMappingURL=style.css.map */
