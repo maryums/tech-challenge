@@ -237,6 +237,13 @@ footer {
     color: #6E7A82;
 }
 
+.footer-logo {
+    border-top: 1px solid #D8DCDF;
+    border-bottom: 1px solid #D8DCDF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .footer-logo img {
     height: 27px;
 }

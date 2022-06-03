@@ -27,7 +27,7 @@ document.body.addEventListener('click', function (event) {
 
         let articleImage = document.createElement("div")
         articleImage.classList.add("article-image")
-        articleImage.innerHTML = `<img src="./assets/${event.target.id}.png">`
+        articleImage.innerHTML = `<img src="./assets/${event.target.id}.jpeg">`
 
         let articleTitle = document.createElement("div")
         articleTitle.classList.add("article-title")

@@ -17,7 +17,7 @@ const renderCards = () => {
         card.classList.add('card')
         let cardPhoto = document.createElement('div')
         cardPhoto.classList.add('card-photo')
-        cardPhoto.innerHTML = `<img src=./assets/${count}.png>`
+        cardPhoto.innerHTML = `<img src=./assets/${count}.jpeg>`
         let cardArticle = document.createElement('div')
         cardArticle.classList.add('card-article')
         let h3Title = document.createElement('h3')
